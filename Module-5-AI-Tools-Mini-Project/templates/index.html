@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <p class="tag">Module 5 • AI Tools & Mini Project</p>
+            <h1>AI Content Assistant</h1>
+            <p class="subtitle">
+                A simple AI-powered web application for generating, summarizing,
+                and improving text with Google Gemini.
+            </p>
+        </section>
+
+        <section class="card">
+            <label for="task">Choose a task</label>
+            <select id="task">
+                <option value="generate">Generate Content</option>
+                <option value="summarize">Summarize Text</option>
+                <option value="improve">Improve Writing</option>
+            </select>
+
+            <label for="inputText">Your text or idea</label>
+            <textarea id="inputText" placeholder="Enter an idea, paragraph, or draft..."></textarea>
+
+            <button id="generateBtn">Run AI Assistant</button>
+
+            <div class="result-box">
+                <div class="result-heading">
+                    <h2>AI Result</h2>
+                    <button id="copyBtn" class="secondary">Copy</button>
+                </div>
+                <div id="result">Your AI-generated result will appear here.</div>
+            </div>
+        </section>
+
+        <footer>
+            Built with Python, Flask, HTML, CSS, JavaScript and Google Gemini API.
+        </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
